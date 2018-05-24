@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import fns from '../utils/functions';
 
 export default class Password extends Component {
     constructor(props) {
@@ -22,11 +23,24 @@ export default class Password extends Component {
         })
     }
 
+    validatePassword(password)
+    {
+
+    }
+
     createPassword() {
-        if (this.usernameCheck(this.state.username) && this.passwordCheck(this.state.password)) {
-            alert('Username and password updated')
-        } else {
-            alert('Please follow instructions when creating a username and password')
+        // if (this.usernameCheck(this.state.username) && this.passwordCheck(this.state.password)) {
+        //     alert('Username and password updated')
+        // } else {
+        //     alert('Please follow instructions when creating a username and password')
+        // }
+        if(fns.validateUsername(this.state.username))
+        {
+            alert('yanny - works');
+        }
+        else
+        {
+            alert('laurel - bad');
         }
     }
 
